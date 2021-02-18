@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="den.css" />
+    <script>
+      function goBack() {
+        location.replace("den.html");
+      }
+    </script>
+  </head>
+  <body>
+    <body onload="myFunction()">
+      <button onclick="goBack()">Go Back</button>
+    <h1 class="">Entered Data</h1>
+
+    <div class="content">
+      <form id="add-cafe-form"></form>
+
+      <!-- <ul id="cafe-list"></ul> -->
+      <div id="cafe-list"></div>
+    </div>
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB2DaR5cT5al0rfNeHUvvezE6uWGexjVrc",
+        authDomain: "ninja-firestore-tut-47b47.firebaseapp.com",
+        projectId: "ninja-firestore-tut-47b47",
+        storageBucket: "ninja-firestore-tut-47b47.appspot.com",
+        messagingSenderId: "156151797371",
+        appId: "1:156151797371:web:f9fd13c7ea6708ca4fb4de",
+        measurementId: "G-8Q07Q193H1",
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="dis.js"></script>
+  </body>
+</html>

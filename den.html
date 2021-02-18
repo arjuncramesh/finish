@@ -1,0 +1,87 @@
+<html>
+  
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="den.css" />
+    <script>
+      function goBack() {
+        location.replace("otp.html");
+      }
+      function goView() {
+        location.replace("dis.html");
+      }
+    </script>
+  </head>
+    <body onload="myFunction()">
+    <button class="cancelbtn" onclick="goBack()">Go Back</button>
+    
+    <button class="cancelbtn" onclick="goView()">View Record</button>
+    <button class="cancelbtn" onclick="insertdata()">Add to Record</button>
+
+
+    <h1 class="heading">Record</h1>
+
+    <div class="content">
+      <form id="add-labour-form">
+        <input class="input1"
+          type="text"
+          name="data1"
+          id="data1"
+          placeholder="visiter name"
+          required
+        />
+        <input class="input1"
+          type="text"
+          name="data2"
+          id="data2"
+          placeholder="address"
+          required
+        />
+        <input class="input1"
+          type="text"
+          name="data3"
+          id="data3"
+          placeholder="Adhar id"
+          required
+        />
+        <input class="input1"
+          type="file"
+          id="default-file"
+          hidden="hidden"
+          required
+          onchange="PreviewImage()"
+        />
+        <button type="submit" class="cancelbtn" onclick="event.preventDefault();Create()">
+          Add details
+        </button>
+        <!-- <input type="file" id="default-file" hidden="hidden" required  onchange=PreviewImage()/> -->
+        <!-- <button onclick="Create()">Add details</button> -->
+      </form>
+      <div>
+        <!--image insertion-->
+        <div>
+          <!-- <input type="file" id="default-file" hidden="hidden" /> -->
+        
+          <span id="custom-space"></span>
+        </div>
+        <!-- Image Preview Markup -->
+        <div class="preview_holder">
+          <div id="preview">
+            <img
+              src=""
+              id="preview_img"
+              class="preview_img"
+              style="max-width: 100px"
+            />
+            <span id="preview_text" class="preview_text"></span>
+            <script src="app.js"></script>
+          </div>
+        </div>
+      </div>
+      <ul id="cafelist"></ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

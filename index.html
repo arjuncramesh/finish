@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center;">
+    <h3 class= "we">HOME</h3>
+    </div></br>
+    <form name="IndexForm" method="POST" class="fix" onsubmit="return false">
+      <div class="container">
+        <label class="we">Username : </label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          id="username"
+          required
+        />
+        <br />
+        <label class="we">Password : </label>
+
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          required
+        />
+        <div id="outer">
+          <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+          <button onclick="check()" class="cancelbtn" type="submit" ;>
+            Enter
+          </button>
+          <button type="button" class="cancelbtn">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

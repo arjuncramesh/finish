@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"  charset = "UTF-8"/>
+    <title>otpgenration</title>
+    <link rel="stylesheet" type="text/css" href="den.css" />
+    <script src="all.js"></script>
+    <script>
+      function goBack() {
+       location.replace("entry2.html");
+}
+    </script>
+  </head>
+  <body>
+    
+    <button onclick="goBack()">Go Back</button> 
+    <h1 class="h1">Number Verification</h1>
+    <form class="fix">
+      <div class="container">
+        <input class="input1"
+          placeholder="Enter mobile number"
+          name="NUMBER"
+          id="otp"
+          type="tel" minlength="10" maxlength="10"
+          required
+        />
+        <button type="submit" onclick=" return  generateOTP()">Generate otp</button>
+      </div>
+    </form>
+  </body>
+</html>

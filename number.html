@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>otpgenration</title>
+    <link rel="stylesheet" type="text/css" href="den.css" />
+    <script src="all.js"></script>
+    <script>
+      var sendOTP = function() {
+      window.location.href = 'sms://'+ mob+'?body='+otp123;
+      }
+      function goBack() { 
+       location.replace("entry2.html");
+      }
+   </script>
+  </head>
+  <body>
+    <button onclick="goBack()">Go Back</button>
+    <center><h1>OTP Verification</h1></center>
+    <form class="fix">
+      <div class="entry2-body-wrapper">
+        <input class="input1"
+          type="number"
+          placeholder="Enter otp"
+          id="verify"
+          name="NUMBER"
+          required
+        />
+        <button onclick="return otpgen()" type="submit">verify</button>
+        <!-- <a href="" onclick="location.href = 'sms:' + mob+'?body='+otp123; return false;">android sms</a> -->
+        <button onclick='sendOTP()'>Send OTP</button><br/>
+      </div>
+    </form>
+  </body>
+</html>

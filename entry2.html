@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Records</title>
+    <link rel="stylesheet" type="text/css" href="den.css" />
+    <script>
+        function goBack() {
+          location.replace("index.html")
+        }
+    </script>
+    <script src="all.js"></script>
+  </head>
+  <body>
+    <button onclick="goBack()">Go Back</button>
+    <center><h1>Home page</h1></center>
+    <form class="fix">
+      <div class="entry2-body-wrapper">
+        <button type="submit" formaction="otp.html">Enter  Record</button>
+        <button type="submit" onclick="return pageUrl()">View  Record</button>
+      </div>
+    </form>
+  </body>
+</html>
